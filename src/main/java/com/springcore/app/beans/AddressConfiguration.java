@@ -15,4 +15,9 @@ public class AddressConfiguration {
     public String address2(){
         return "str. Primaverii, 103";
     }
+
+    @Bean
+    public Customer getCustomer() {
+        return new Customer("Marcel", "Mures");
+    }
 }

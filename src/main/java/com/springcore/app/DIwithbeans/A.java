@@ -8,6 +8,7 @@ public class A {
     public A() {
     }
 
+
     public int generateNumber(){
         return 1;
     }

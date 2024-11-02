@@ -10,11 +10,13 @@ import org.springframework.context.ApplicationContext;
 @SpringBootApplication
 public class DemoBeans implements CommandLineRunner {
 
+    private final Customer getCustomer;
     ApplicationContext applicationContext;
 
     @Autowired
-    public DemoBeans(ApplicationContext applicationContext) {
+    public DemoBeans(ApplicationContext applicationContext, Customer getCustomer) {
         this.applicationContext = applicationContext;
+        this.getCustomer = getCustomer;
     }
 
     public static void main(String[] args) {
@@ -24,5 +26,6 @@ public class DemoBeans implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println(applicationContext.getBean("address1"));
+//        System.out.println(applicationContext.getBean(getCustomer);
     }
 }

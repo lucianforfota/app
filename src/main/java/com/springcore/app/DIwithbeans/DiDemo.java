@@ -9,11 +9,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DiDemo implements CommandLineRunner {
 
-    private C c;
+    private C etc;
 
     @Autowired
-    public DiDemo(C c) {
-        this.c = c;
+    public DiDemo(C d) {
+         //CLASIC this.etc=new C(new B(new A()));
+        this.etc =d;
     }
 
     public static void main(String[] args) {
@@ -23,6 +24,6 @@ public class DiDemo implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println(c.generateNumber());
+        System.out.println(etc.generateNumber());
     }
 }
